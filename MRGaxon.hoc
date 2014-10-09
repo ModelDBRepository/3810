@@ -90,7 +90,7 @@ proc initialize(){
 			cm=2*paraD1/fiberD
 			insert pas
 			g_pas=0.001*paraD1/fiberD		
-			e_pas=v_init
+			e_pas=-80
 			insert extracellular xraxial=Rpn1 xg=mygm/(nl*2) xc=mycm/(nl*2)
 			}
 	}
@@ -103,7 +103,7 @@ proc initialize(){
 			cm=2*paraD2/fiberD
 			insert pas
 			g_pas=0.0001*paraD2/fiberD		
-			e_pas=v_init
+			e_pas=-80
 			insert extracellular xraxial=Rpn2 xg=mygm/(nl*2) xc=mycm/(nl*2)
 			}
 	}
@@ -116,7 +116,7 @@ proc initialize(){
 			cm=2*axonD/fiberD
 			insert pas
 			g_pas=0.0001*axonD/fiberD
-			e_pas=v_init
+			e_pas=-80
 			insert extracellular xraxial=Rpx xg=mygm/(nl*2) xc=mycm/(nl*2)
 			}
 	}
