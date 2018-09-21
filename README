@@ -22,3 +22,7 @@ discontinuity.
 
 20141009 Nikki Pelot tidied up the code by changing e_pas = v_init to
 e_pas = -80 in three lines (number 93, 106, 119) in MRGaxon.hoc.
+
+20180920 NTC fixed stimulus parameter panel, 
+which previously affected only stimulus amplitude.
+

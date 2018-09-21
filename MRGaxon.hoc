@@ -140,19 +140,20 @@ proc initialize(){
 initialize()
 
 //intracellular stimulus//
-proc stimul() {
-	node[10]{
-		stim=new IClamp()
-		stim.loc(.5)
-		stim.del=delay
-		stim.dur=pw
-		stim.amp=istim
-		}
+
+node[10] stim = new IClamp(0.5)
+
+proc setstimparams() {
+  stim.del = delay
+  stim.dur = pw
+  stim.amp = istim
 }
-stimul()
+
+setstimparams()
 
 xpanel("Stimulus parameters")
-	xvalue("Stimulus Amplitude (nA)", "istim", 1, "stimul()", 1)
-	xvalue("Pulse Duration (ms)", "pw", 1)
-	xvalue("Onset Delay (ms)", "delay", 1)
-xpanel(100,100) 
+	xvalue("Stimulus Amplitude (nA)", "istim", 1, "setstimparams()", 1)
+	xvalue("Pulse Duration (ms)", "pw", 1, "setstimparams()", 1)
+	xvalue("Onset Delay (ms)", "delay", 1, "setstimparams()", 1)
+xpanel(100,100)
+
